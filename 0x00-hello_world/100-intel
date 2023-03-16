@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -masm=intel -o ${CFILE%.*}.s $CFILE
+nasm -f elf64 -g -F dwarf -o ${CFILE%.c}.o $CFILE && ld -o ${CFILE%.c} ${CFILE%.c}.o && objdump -d ${CFILE%.c} > ${CFILE%.c}.s
