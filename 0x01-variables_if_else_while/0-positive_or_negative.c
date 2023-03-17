@@ -19,7 +19,7 @@ int main(void)
 		printf("%d is positive\n", n);
 	}
 	else {
-		printf("is Zero\n");
+		printf("0 is Zero\n");
 	}
 	return (0);
 }
